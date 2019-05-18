@@ -98,7 +98,7 @@ func IsValidBucketName(bucket string) bool {
 		for i := 0; i < len(piece); i++ {
 			switch {
 			case (piece[i] >= 'a' && piece[i] <= 'z' ||
-				piece[i] == '-'):
+				piece[i] == '-' || piece[i] == '_'):
 				// Found a non-digit character, so
 				// this piece is not a number.
 				isNotNumber = true
